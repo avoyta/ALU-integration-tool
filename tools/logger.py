@@ -8,7 +8,7 @@ def getLogger(__name):
     :return: logger object with 2 handlers. First handler logging to file and second handler print to console
     '''
     #TODO:agorbachev:develop log formatter
-    formatter = logging.Formatter('%(name)s:%(levelname)s \t%(asctime)s:')
+    formatter = logging.Formatter('%(name)s: %(levelname)s \t%(asctime)s: %(message)s')
 
     LOG = logging.getLogger(__name)
     #TODO:agorbachev:add logging level selection
