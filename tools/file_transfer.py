@@ -37,7 +37,7 @@ def put_cfgfile_to_host(host, user, passwd, local_full_path, filename, dst_full_
         try:
             ftp.storbinary('STOR {0}'.format(filename), open(filename, 'rb'))
             if filename in ftp.nlst():
-                print('{0} upload successfully...'.format(filename))
+                print('File {0} upload successfully to {1}:{2}'.format(filename, host, dst_full_path))
         except:
             pass
 
