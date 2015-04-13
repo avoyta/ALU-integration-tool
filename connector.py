@@ -2,10 +2,11 @@
 import tools.logger as logger
 import paramiko
 import time
-from datetime import datetime
 
-
+# setup logging
+paramiko.util.log_to_file('./logs/SSH.log')
 LOG = logger.getLogger('Connector')
+
 ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
